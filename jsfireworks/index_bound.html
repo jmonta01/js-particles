@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>This is a quick fireworks test</title>
+    <link rel="stylesheet" href="css/core.css" type="text/css" />
+    <script src="js/montyModernizer.js"></script>
+    <script src="js/angular-1.0.0rc8.js"></script>
+    <script src="js/Controller.js"></script>
+    <!--<script type="text/javascript" src="js/particle.js" />-->
+    <script type="text/javascript">
+
+        function init(){
+           /* var particles=[], numParticles = 10;
+
+            var particle;
+            for(var x=0; x<numParticles; x++){
+                particle = new Particle(0, 0, 5);
+                particles.push(particle);
+                console.log(particle.initial_x, particle.initial_y)
+            }*/
+        }
+
+    </script>
+</head>
+<body>
+    <div id="display">
+        <canvas id="mainCanvas"></canvas>
+        <div id="ground"></div>
+    </div>
+    <div id="ui" ng-controller="Controller">
+        <h2>Particles</h2>
+        <ul id="particleList" ng-repeat="particle in particles">
+            <span>id: {{particle.id}} - x: {{particle.x}} - y: {{particle.y}}</span>
+        </ul>
+    </div>
+</body>
+</html>

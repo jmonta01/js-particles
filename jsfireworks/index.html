@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>This is a quick fireworks test</title>
+    <link rel="stylesheet" href="css/core.css" type="text/css" />
+    <script src="js/montyModernizer.js"></script>
+    <script src="js/FireworksShow.js"></script>
+    <script src="js/Firework.js"></script>
+    <script type="text/javascript">
+        var canvas, context, show;
+
+        window.requestAnimFrame = (function(){
+            return  window.requestAnimationFrame       ||
+                    window.webkitRequestAnimationFrame ||
+                    window.mozRequestAnimationFrame    ||
+                    window.oRequestAnimationFrame      ||
+                    window.msRequestAnimationFrame     ||
+                    function( callback ){
+                        window.setTimeout(callback, 1000 / 60);
+                    };
+        })();
+
+
+        function initApp(){
+            canvas = document.getElementById("mainCanvas");
+            context = canvas.getContext("2d");
+            context.fillStyle = "#000000";
+            context.fillRect(0, 0, canvas.width, canvas.height);
+
+            show = new FireworksShow(context, canvas.width, canvas.height);
+            show.shoot();
+            window.requestAnimFrame(update);
+        }
+
+        function add(){
+            show.shoot();
+        }
+
+        function update(){
+            context.fillStyle = "#000000";
+            context.fillRect(0, 0, canvas.width, canvas.height);
+            show.update();
+            window.requestAnimFrame(update);
+        }
+    </script>
+</head>
+<body onload="initApp()">
+    <div id="display">
+        <canvas id="mainCanvas" width="960" height="480" onclick="add()"></canvas>
+    </div>
+<!--    <div id="ui">
+        <h2>Particles</h2>
+    </div>-->
+</body>
+</html>
