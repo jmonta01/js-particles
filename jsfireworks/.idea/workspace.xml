@@ -21,44 +21,63 @@
     <favorites_list name="jsfireworks" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="9" selection-start="1241" selection-end="1241" vertical-scroll-proportion="-0.65384614">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FireworksShow.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/FireworksShow.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="5" selection-start="855" selection-end="855" vertical-scroll-proportion="0.455516">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Firework.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/Firework.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="8" selection-start="1587" selection-end="1587" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index_bound.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index_bound.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="35" selection-start="613" selection-end="613" vertical-scroll-proportion="-11.115385">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.6812962">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="42" column="25" selection-start="1561" selection-end="1561" vertical-scroll-proportion="-12.423077">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="core.css" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/css/core.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="42" column="12" selection-start="652" selection-end="652" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="FireworksShow.js" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/js/FireworksShow.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="49" column="84" selection-start="1567" selection-end="1567" vertical-scroll-proportion="0.59667856">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Firework.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/Firework.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="34" column="34" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#1085#1743#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="index_bound.html" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/index_bound.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="17" column="35" selection-start="613" selection-end="613" vertical-scroll-proportion="0.35945272">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -77,11 +96,11 @@
         <option value="$PROJECT_DIR$/js/Controller.js" />
         <option value="$PROJECT_DIR$/js/modernizr-2.5.3.js" />
         <option value="$PROJECT_DIR$/js/FireworkShow.js" />
-        <option value="$PROJECT_DIR$/js/montyModernizer.js" />
         <option value="$PROJECT_DIR$/js/particle.js" />
+        <option value="$PROJECT_DIR$/index_bound.html" />
+        <option value="$PROJECT_DIR$/js/montyModernizer.js" />
         <option value="$PROJECT_DIR$/css/core.css" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/index_bound.html" />
         <option value="$PROJECT_DIR$/js/Firework.js" />
         <option value="$PROJECT_DIR$/js/FireworksShow.js" />
       </list>
@@ -148,6 +167,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsfireworks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsfireworks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -254,7 +287,7 @@
       <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16115196" sideWeight="0.6705069" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15073529" sideWeight="0.6705069" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -326,40 +359,46 @@
         <state line="936" column="28" selection-start="15257" selection-end="15261" vertical-scroll-proportion="-10.88" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/montyModernizer.js">
+    <entry file="file://$PROJECT_DIR$/index_bound.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1261" column="0" selection-start="48073" selection-end="48073" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/core.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="1" selection-start="92" selection-end="92" vertical-scroll-proportion="0.14116251" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="9" selection-start="1241" selection-end="1241" vertical-scroll-proportion="-0.65384614">
+        <state line="17" column="35" selection-start="613" selection-end="613" vertical-scroll-proportion="0.35945272">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index_bound.html">
+    <entry file="file://$PROJECT_DIR$/js/montyModernizer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="35" selection-start="613" selection-end="613" vertical-scroll-proportion="-11.115385">
+        <state line="195" column="0" selection-start="6822" selection-end="6822" vertical-scroll-proportion="0.045783132">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/core.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="12" selection-start="652" selection-end="652" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="25" selection-start="1561" selection-end="1561" vertical-scroll-proportion="-12.423077">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Firework.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="8" selection-start="1587" selection-end="1587" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="34" column="34" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1085#1743#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/FireworksShow.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="5" selection-start="855" selection-end="855" vertical-scroll-proportion="0.455516">
+        <state line="49" column="84" selection-start="1567" selection-end="1567" vertical-scroll-proportion="0.59667856">
           <folding />
         </state>
       </provider>

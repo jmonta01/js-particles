@@ -4,10 +4,23 @@
         this.x = x;
         this.y = y;
         this.radius = radius;
-        this.red = 255;
-        this.green = 255;
-        this.blue = 255;
+        var seed = Math.random();
 
+        if(FireworksShow.monochromeSpark === false){
+            if(seed <= .2){
+                this.spark = FireworksShow.white_spark;
+            }else if(seed > .2 && seed <= .4){
+                this.spark = FireworksShow.red_spark;
+            }else if(seed > .4 && seed <= .6){
+                this.spark = FireworksShow.yellow_spark;
+            }else if(seed > .6 && seed <= .8){
+                this.spark = FireworksShow.orange_spark;
+            }else if(seed > .8 && seed <= 1){
+                this.spark = FireworksShow.blue_spark;
+            }
+        }else{
+            this.spark = FireworksShow.white_spark;
+        }
     }
 
     Firework.prototype.addImpulse = function(x_force, y_force){
@@ -15,51 +28,36 @@
         this.vy = y_force;
     }
 
-    Firework.prototype.update = function(gravity){
+    Firework.prototype.update = function(gravity, useBoundaries){
        this.x += this.vx;
        this.y += this.vy;
 
+        if(useBoundaries === true){
+            if(this.x > FireworksShow.width-this.radius){
+                this.x = FireworksShow.width-this.radius;
+                this.vx *= FireworksShow.edgeBounce;
+            }else if(this.x < 0+this.radius){
+                this.x = 0+this.radius;
+                this.vx *= FireworksShow.edgeBounce;
+            }
 
-        if(this.x > FireworksShow.width-this.radius){
-            this.x = FireworksShow.width-this.radius;
-            this.vx *= FireworksShow.edgeBounce;
-        }else if(this.x < 0+this.radius){
-            this.x = 0+this.radius;
-            this.vx *= FireworksShow.edgeBounce;
-        }
-
-        if(this.y > FireworksShow.height-this.radius){
-            this.y = FireworksShow.height-this.radius;
-            this.vy *= FireworksShow.edgeBounce;
-        }else if(this.y < 0+this.radius){
-            this.y = 0+this.radius;
-            this.vy *= FireworksShow.edgeBounce;
+            if(this.y > FireworksShow.height-this.radius){
+                this.y = FireworksShow.height-this.radius;
+                this.vy *= FireworksShow.edgeBounce;
+            }else if(this.y < 0+this.radius){
+                this.y = 0+this.radius;
+                this.vy *= FireworksShow.edgeBounce;
+            }
         }
 
         this.vx *= FireworksShow.airDrag;
         this.vy += FireworksShow.gravity;
         this.vy *= FireworksShow.airDrag;
-
-
-        var xM = ((FireworksShow.width - this.x)/FireworksShow.width)*20;
-        var yM = ((FireworksShow.height - this.y)/FireworksShow.height)*5;
-
-//        this.red = Math.max(25, Math.floor(255*xM*yM));
-//        this.green = Math.max(25, Math.floor(255*yM));
-//        this.blue = Math.max(25, Math.floor(255*yM));
-
-     //   color = "rgb("+this.red+", "+this.green+", "+this.blue+")";
-        color = "#FFFFFF";
-      //  console.log(color)
     }
 
 
     Firework.prototype.draw = function(stage){
-        stage.beginPath();
-        stage.arc(this.x, this.y, this.radius, 0, Math.PI*2, false);
-        stage.closePath();
-        stage.fillStyle = color;
-        stage.fill();
+        stage.drawImage(this.spark, this.x, this.y, this.radius, this.radius)
     }
 
 

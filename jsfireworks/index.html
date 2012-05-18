@@ -7,49 +7,62 @@
     <script src="js/FireworksShow.js"></script>
     <script src="js/Firework.js"></script>
     <script type="text/javascript">
-        var canvas, context, show;
-
-        window.requestAnimFrame = (function(){
-            return  window.requestAnimationFrame       ||
-                    window.webkitRequestAnimationFrame ||
-                    window.mozRequestAnimationFrame    ||
-                    window.oRequestAnimationFrame      ||
-                    window.msRequestAnimationFrame     ||
-                    function( callback ){
-                        window.setTimeout(callback, 1000 / 60);
-                    };
-        })();
+        var canvas, context, show, particleCount, useBoundaries, isMonochrome, background;
 
 
         function initApp(){
+            useBoundaries = document.getElementById("useBoundaries");
+            isMonochrome = document.getElementById("isMonochrome");
+            particleCount = document.getElementById("particleCount");
             canvas = document.getElementById("mainCanvas");
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
             context = canvas.getContext("2d");
-            context.fillStyle = "#000000";
-            context.fillRect(0, 0, canvas.width, canvas.height);
 
-            show = new FireworksShow(context, canvas.width, canvas.height);
-            show.shoot();
-            window.requestAnimFrame(update);
+            background = new Image();
+            background.onload = function(){
+                fillCanvas();
+                show = new FireworksShow(context, canvas.width, canvas.height);
+                window.requestAnimFrame(update);
+           }
+           background.src = "images/background.jpg";
+
+        }
+        function fillCanvas(){
+            context.drawImage(background, 0, 0)
         }
 
-        function add(){
+        function add(event){
+            var x = event.pageX - canvas.offsetLeft;
+            var y = event.pageY - canvas.offsetTop;
+            show.generate(particleCount.value, x, y, isMonochrome.checked);
             show.shoot();
         }
 
         function update(){
-            context.fillStyle = "#000000";
-            context.fillRect(0, 0, canvas.width, canvas.height);
-            show.update();
+            fillCanvas();
+            show.update(useBoundaries.checked);
             window.requestAnimFrame(update);
         }
     </script>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oleo Script|Limelight">
 </head>
 <body onload="initApp()">
-    <div id="display">
-        <canvas id="mainCanvas" width="960" height="480" onclick="add()"></canvas>
+    <canvas id="mainCanvas" onclick="add(event)"></canvas>
+    <div id="ui">
+        <div id="info">
+            <h2>Fireworks</h2>
+            <span>
+                This is a particle perfomance test using arrays with the canvas.
+                Background image by <a href="http://s3vendays.deviantart.com/">s3vendays</a> on deviantart.
+            </span>
+        </div>
+        <div id="settings">
+            <label for="particleCount">Particle count</label><br />
+            <input type="number" id="particleCount" min="0" max="2000" value="100" /><br/>
+            <input type="checkbox" id="useBoundaries" /> <label for="useBoundaries">Bounce off edges</label><br />
+            <input type="checkbox" id="isMonochrome" /> <label for="isMonochrome">Monochrome Sparks</label>
+        </div>
     </div>
-<!--    <div id="ui">
-        <h2>Particles</h2>
-    </div>-->
 </body>
 </html>
