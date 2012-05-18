@@ -15,7 +15,7 @@
 
     FireworksShow.prototype.init = function(){
         clear();
-        this.generate(50);
+        this.generate(500);
     }
 
     FireworksShow.prototype.generate = function(count){

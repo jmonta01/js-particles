@@ -7,6 +7,7 @@
         this.red = 255;
         this.green = 255;
         this.blue = 255;
+
     }
 
     Firework.prototype.addImpulse = function(x_force, y_force){
@@ -43,12 +44,13 @@
         var xM = ((FireworksShow.width - this.x)/FireworksShow.width)*20;
         var yM = ((FireworksShow.height - this.y)/FireworksShow.height)*5;
 
-        this.red = Math.max(25, Math.floor(255*xM*yM));
-        this.green = Math.max(25, Math.floor(255*yM));
-        this.blue = Math.max(25, Math.floor(255*yM));
+//        this.red = Math.max(25, Math.floor(255*xM*yM));
+//        this.green = Math.max(25, Math.floor(255*yM));
+//        this.blue = Math.max(25, Math.floor(255*yM));
 
-        color = "rgb("+this.red+", "+this.green+", "+this.blue+")";
-        console.log(color)
+     //   color = "rgb("+this.red+", "+this.green+", "+this.blue+")";
+        color = "#FFFFFF";
+      //  console.log(color)
     }
 
 
